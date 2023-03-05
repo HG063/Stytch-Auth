@@ -6,6 +6,7 @@ import ForgetPassword from "./Pages/ForgetPassword";
 import { StytchHeadlessClient } from "@stytch/vanilla-js/headless";
 import { StytchProvider } from "@stytch/react";
 import Dashboard from "./Pages/Dashboard";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
   const stytchClient = new StytchHeadlessClient(
@@ -20,7 +21,9 @@ function App() {
             <Route path="/Login" element={<Login />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/ForgetPassword/*" element={<ForgetPassword />} />
-            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route element={<ProtectedRoute />}>
+              <Route path="/Dashboard" element={<Dashboard />} />
+            </Route>
           </Routes>
         </StytchProvider>
       </Router>
