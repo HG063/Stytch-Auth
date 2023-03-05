@@ -6,6 +6,8 @@ A stytch Auth app built using stytch. A stytch is a authentication and authoriza
 
 In this Stytch Auth app, I have implemented authorization and authentication using password auth method with reset password by mail functionality. Also, I have integrated validations on input fields using yup and react hookform library with restricted routing functionlity.
 
+Stytch Link :- https://stytch.com/
+
 ![SharedScreenshot1](https://user-images.githubusercontent.com/44071644/222982475-4d13bb62-fad9-4904-805e-85aeac14dae2.jpg)
 ![SharedScreenshot2](https://user-images.githubusercontent.com/44071644/222982480-e99bf612-1da6-4e40-a579-6f34df1f86fd.jpg)
 ![SharedScreenshot3](https://user-images.githubusercontent.com/44071644/222982486-cd4eb77e-72f8-481a-8d6d-5e9c1f3e611c.jpg)
