@@ -6,6 +6,7 @@ import { useStytch } from "@stytch/react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../Validations/Validation.js";
+import swal from "sweetalert";
 
 const ForgetPassword = () => {
   const [newPassword, setNewPassword] = useState("");
@@ -34,9 +35,19 @@ const ForgetPassword = () => {
       .then((res) => {
         console.log("Success:", res);
         navigate("/Dashboard");
+        swal(
+          "Password Reset Successful!",
+          "Password has been successfully Reset",
+          "success"
+        );
       })
       .catch((err) => {
         console.log("Error:", err);
+        swal(
+          "Password Reset Unsuccessful!",
+          "Open Console to view the Error",
+          "error"
+        );
       });
   };
 

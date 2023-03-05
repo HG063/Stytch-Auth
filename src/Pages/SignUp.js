@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../Validations/Validation.js";
 import NavigationBar from "../Components/NavigationBar.js";
+import swal from "sweetalert";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -32,9 +33,15 @@ const SignUp = () => {
       .then((res) => {
         console.log("Success:", res);
         navigate("/Login");
+        swal(
+          "Signup Successful!",
+          "User Created Successfully, Login to View",
+          "success"
+        );
       })
       .catch((err) => {
         console.log("Error:", err);
+        swal("Signup Unsuccessful!", "Open Console to view the Error", "error");
       });
 
     stytchClient.passwords.create({

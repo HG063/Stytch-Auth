@@ -4,6 +4,7 @@ import Stytch from "../Imgs/Stytch.png";
 import { useStytch } from "@stytch/react";
 import { BiLogOutCircle } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 const DashboardNavbar = () => {
   const stytchClient = useStytch();
@@ -12,6 +13,7 @@ const DashboardNavbar = () => {
   const logout = () => {
     stytchClient.session.revoke();
     navigate("/Login");
+    swal("Logout Successful!", "User Logged out successfully", "success");
   };
 
   return (

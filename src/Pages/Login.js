@@ -7,6 +7,7 @@ import { useStytch } from "@stytch/react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import NavigationBar from "../Components/NavigationBar.js";
+import swal from "sweetalert";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -31,17 +32,40 @@ const Login = () => {
       .authenticate({ email, password, session_duration_minutes: 60 })
       .then((res) => {
         navigate("/Dashboard");
+        swal(
+          "Login Successful!",
+          "User Created Successfully, Login to View",
+          "success",
+          {
+            buttons: false,
+            timer: 2000,
+          }
+        );
         console.log("Success:", res);
       })
       .catch((err) => {
         console.log("Error:", err);
+        swal("Login Unsuccessful!", "Open Console to view the Error", "error");
       });
   };
 
   const resetPassword = () => {
-    stytchClient.passwords.resetByEmailStart({
-      email: "harshitgupta063@gmail.com",
-    });
+    stytchClient.passwords
+      .resetByEmailStart({
+        email: "harshitgupta063@gmail.com",
+      })
+      .then((res) => {
+        console.log("Success:", res);
+        swal(
+          "Password Reset!",
+          "Mail Sent Successfully, Open mailbox to view the mail",
+          "success"
+        );
+      })
+      .catch((err) => {
+        console.log("Error:", err);
+        swal("Password Reset!", "Open Console to view the Error", "error");
+      });
   };
 
   return (
