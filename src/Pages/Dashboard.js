@@ -5,6 +5,9 @@ const Dashboard = () => {
   return (
     <div>
       <DashboardNavbar />
+      <div>
+        <h2>Hola, User! Welcome to Stytch Auth App </h2>
+      </div>
     </div>
   );
 };

@@ -24,7 +24,6 @@ const Login = () => {
   const stytchClient = useStytch();
 
   const login = (data) => {
-    console.log(data);
     setEmail(data.email);
     setPassword(data.password);
 

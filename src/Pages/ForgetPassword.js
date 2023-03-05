@@ -23,8 +23,8 @@ const ForgetPassword = () => {
 
   const resetPassword = (data) => {
     data.preventDefault();
-    console.log(data);
     setNewPassword(data.target[0].value);
+
     stytchClient.passwords
       .resetByEmail({
         token,
