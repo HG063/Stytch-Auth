@@ -17,8 +17,8 @@ const NavigationBar = () => {
           Stytch App
         </Navbar.Brand>
         <Nav className="d-flex justify-content-end">
-          <Nav.Link href="/Login">Login</Nav.Link>
-          <Nav.Link href="/SignUp">Sign Up</Nav.Link>
+          <Nav.Link href="/Stytch-Auth/Login">Login</Nav.Link>
+          <Nav.Link href="/Stytch-Auth/SignUp">Sign Up</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

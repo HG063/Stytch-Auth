@@ -31,7 +31,7 @@ const Login = () => {
     stytchClient.passwords
       .authenticate({ email, password, session_duration_minutes: 60 })
       .then((res) => {
-        navigate("/Dashboard");
+        navigate("/Stytch-Auth/Dashboard");
         swal(
           "Login Successful!",
           "User Created Successfully, Login to View",

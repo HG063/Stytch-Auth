@@ -15,7 +15,7 @@ const useAuth = () => {
 const ProtectedRoute = () => {
   const auth = useAuth();
 
-  return auth ? <Outlet /> : <Navigate to="/Login" />;
+  return auth ? <Outlet /> : <Navigate to="/Stytch-Auth/Login" />;
 };
 
 export default ProtectedRoute;

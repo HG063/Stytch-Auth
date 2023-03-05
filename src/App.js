@@ -23,12 +23,18 @@ function App() {
       <Router>
         <StytchProvider stytch={stytchClient}>
           <Routes>
-            <Route path="/" element={<Navigate to="/Login" replace={true} />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/SignUp" element={<SignUp />} />
-            <Route path="/ForgetPassword/*" element={<ForgetPassword />} />
+            <Route
+              path="/Stytch-Auth"
+              element={<Navigate to="/Stytch-Auth/Login" replace={true} />}
+            />
+            <Route path="/Stytch-Auth/Login" element={<Login />} />
+            <Route path="/Stytch-Auth/SignUp" element={<SignUp />} />
+            <Route
+              path="/Stytch-Auth/ForgetPassword/*"
+              element={<ForgetPassword />}
+            />
             <Route element={<ProtectedRoute />}>
-              <Route path="/Dashboard" element={<Dashboard />} />
+              <Route path="/Stytch-Auth/Dashboard" element={<Dashboard />} />
             </Route>
           </Routes>
         </StytchProvider>
