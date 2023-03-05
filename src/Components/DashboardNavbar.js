@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import Stytch from "../Img/Stytch.png";
+import Stytch from "../Imgs/Stytch.png";
 import { useStytch } from "@stytch/react";
 import { BiLogOutCircle } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";

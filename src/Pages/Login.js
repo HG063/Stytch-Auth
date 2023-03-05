@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Stytch from "../Img/Stytch.png";
+import Stytch from "../Imgs/Stytch.png";
 import "../index.css";
 import { schema } from "../Validations/Validation.js";
 import { useStytch } from "@stytch/react";

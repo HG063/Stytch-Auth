@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import Stytch from "../Img/Stytch.png";
+import Stytch from "../Imgs/Stytch.png";
 
 const NavigationBar = () => {
   return (
