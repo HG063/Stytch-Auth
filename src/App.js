@@ -9,7 +9,7 @@ import Dashboard from "./Pages/Dashboard";
 
 function App() {
   const stytchClient = new StytchHeadlessClient(
-    "public-token-test-22179d40-21f6-4d5b-ab91-c1063ec27a66"
+    `${process.env.REACT_APP_PUBLIC_TOKEN}`
   );
 
   return (
