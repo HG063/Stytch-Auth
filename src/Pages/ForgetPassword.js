@@ -34,7 +34,7 @@ const ForgetPassword = () => {
       })
       .then((res) => {
         console.log("Success:", res);
-        navigate("/Stytch-Auth/Dashboard");
+        navigate("/Dashboard");
         swal(
           "Password Reset Successful!",
           "Password has been successfully Reset",

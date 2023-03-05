@@ -12,7 +12,7 @@ const DashboardNavbar = () => {
 
   const logout = () => {
     stytchClient.session.revoke();
-    navigate("/Stytch-Auth/Login");
+    navigate("/Login");
     swal("Logout Successful!", "User Logged out successfully", "success");
   };
 

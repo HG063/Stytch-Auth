@@ -32,7 +32,7 @@ const SignUp = () => {
       .strengthCheck({ email, password })
       .then((res) => {
         console.log("Success:", res);
-        navigate("/Stytch-Auth/Login");
+        navigate("/Login");
         swal(
           "Signup Successful!",
           "User Created Successfully, Login to View",
@@ -130,7 +130,7 @@ const SignUp = () => {
                 </button>
               </form>
               <p className="forgot-password text-right">
-                Already registered? <Link to="/Stytch-Auth/Login">Log In</Link>
+                Already registered? <Link to="/Login">Log In</Link>
               </p>
             </div>
           </div>
