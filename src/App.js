@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import ForgetPassword from "./Pages/ForgetPassword";
@@ -18,6 +23,7 @@ function App() {
       <Router>
         <StytchProvider stytch={stytchClient}>
           <Routes>
+            <Route path="/" element={<Navigate to="/Login" replace={true} />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/ForgetPassword/*" element={<ForgetPassword />} />
