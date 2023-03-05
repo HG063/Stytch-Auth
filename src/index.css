@@ -81,3 +81,12 @@ html,
   top: 45%;
   transform: translate(0, -55%);
 }
+
+.Red-Validation {
+  display: flex;
+  justify-content: flex-start;
+  color: red;
+  margin-top: -3%;
+  padding-bottom: 2%;
+  font-size: small;
+}
